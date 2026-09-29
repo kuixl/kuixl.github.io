@@ -74,11 +74,11 @@ export const sound = {
    * exactly why the preloader opens with an invitation to press something.
    */
   async enable() {
-    if (prm || enabled) return;
-    enabled = true;
-    await startLoop();
-    syncButton();
-  },
+  if (prm) return;
+  enabled = true;
+  await startLoop();
+  syncButton();
+},
 
   /** tiny typewriter click on symbol locks, throttled */
   click() {
